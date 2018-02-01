@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
     }
 
-    private int calculateResult(boolean hasFirstAnswer, boolean hasSecondAnswer, boolean hasThirdAnswer, boolean hasFourthAnswer, boolean hasFifthAnswer){
+    private int calculateResult(boolean hasFirstAnswer, boolean hasSecondAnswer, boolean hasThirdAnswer, boolean hasFourthAnswer, boolean hasFifthAnswer) {
         results = 0;
         if (hasFirstAnswer)
             results = results + 20;
@@ -34,11 +34,11 @@ public class DetailActivity extends AppCompatActivity {
         return results;
     }
 
-    private boolean isFirstAnswer(){
+    private boolean isFirstAnswer() {
         EditText firstAnswerText = findViewById(R.id.first_answer);
         String answer = firstAnswerText.getText().toString();
         TextView oneQuestionText = findViewById(R.id.text_question_one);
-        if (answer.equals("Boris Yeltsin") || answer.equals("Yeltsin") || answer.equals("boris yeltsin") || answer.equals("yeltsin")){
+        if (answer.equals("Boris Yeltsin") || answer.equals("Yeltsin") || answer.equals("boris yeltsin") || answer.equals("yeltsin")) {
             oneQuestionText.setTextColor(Color.GREEN);
             return true;
         } else {
@@ -47,21 +47,20 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    private boolean isSecondAnswer(){
+    private boolean isSecondAnswer() {
         CheckBox oneCheckRight = findViewById(R.id.second_answer_right_one);
         CheckBox twoCheckRight = findViewById(R.id.second_answer_right_two);
         TextView twoQuestionText = findViewById(R.id.text_question_two);
-        if (oneCheckRight.isChecked() && twoCheckRight.isChecked()){
+        if (oneCheckRight.isChecked() && twoCheckRight.isChecked()) {
             twoQuestionText.setTextColor(Color.GREEN);
             return true;
-        }
-        else {
+        } else {
             twoQuestionText.setTextColor(Color.RED);
             return false;
         }
     }
 
-    private boolean isThirdAnswer(){
+    private boolean isThirdAnswer() {
         RadioButton radioButton = findViewById(R.id.third_answer_right);
         TextView threeQuestionText = findViewById(R.id.text_question_three);
         if (radioButton.isChecked()) {
@@ -74,7 +73,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-    private boolean isFourthAnswer(){
+    private boolean isFourthAnswer() {
         RadioButton fourthAnswerButton = findViewById(R.id.fourth_answer_right);
         TextView fourQuestionText = findViewById(R.id.text_question_four);
         if (fourthAnswerButton.isChecked()) {
@@ -86,11 +85,11 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    private boolean isFifthAnswer(){
+    private boolean isFifthAnswer() {
         EditText fifthAnswerText = findViewById(R.id.fifth_answer);
         TextView fiveQuestionText = findViewById(R.id.text_question_five);
         String answer = fifthAnswerText.getText().toString();
-        if (answer.equals("Ivan") || answer.equals("ivan")){
+        if (answer.equals("Ivan") || answer.equals("ivan")) {
             fiveQuestionText.setTextColor(Color.GREEN);
             return true;
         } else {
@@ -99,8 +98,11 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    public void resultClick(View view){
-        results = calculateResult(isFirstAnswer(), isSecondAnswer(), isThirdAnswer(),isFourthAnswer(), isFifthAnswer());
-        Toast.makeText(this, "You scored " + results + " points", Toast.LENGTH_LONG).show();
+    public void resultClick(View view) {
+        results = calculateResult(isFirstAnswer(), isSecondAnswer(), isThirdAnswer(), isFourthAnswer(), isFifthAnswer());
+        if (results == 0) {
+            Toast.makeText(this, "You scored 0 point", Toast.LENGTH_LONG).show();
+        } else
+            Toast.makeText(this, "You scored " + results + " points", Toast.LENGTH_LONG).show();
     }
 }
