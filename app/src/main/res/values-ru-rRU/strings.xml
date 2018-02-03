@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Викторина</string>
+    <string name="option_one_third_question">Украина</string>
+    <string name="quiz_text">Историческая викторина о Росии</string>
+    <string name="option_two">Саша</string>
+    <string name="option_two_third_question">Россия</string>
+    <string name="results">Результат</string>
+    <string name="button_text">Нажми сюда</string>
+    <string name="option_four_third_question">Грузия</string>
+    <string name="option_three_third_question">Беларусь</string>
+    <string name="first_answer">Ответ</string>
+    <string name="option_one">Анжела</string>
+    <string name="option_three">Алиса</string>
+    <string name="option_four">Александра</string>
+    <string name="option_one_fourth_question">Крымская война</string>
+    <string name="option_two_fourth_question">Война 1812 года</string>
+    <string name="option_four_fourth_question">Бурская война</string>
+    <string name="second_question">Как звали жену Николая II? (Два ответа)</string>
+    <string name="first_question">Кто был первым президентом Российской Федерации?</string>
+    <string name="fourth_question">В какой из этих войн участвовала Россия?</string>
+    <string name="third_question">В какой современной стране родился Иосиф Сталин?</string>
+    <string name="fifth_question">Назовите имя русского правителя, которого называли Грозным?</string>
+    <string name="option_three_fourth_question">Восстание сипаев</string>
+    <string name="first_text_one">борис ельцин</string>
+    <string name="fifth_text">иван</string>
+    <string name="first_text_two">ельцин</string>
+    <string name="score_text_part_one">"Вы набрали "</string>
+    <string name="score_text_part_two">" очков"</string>
+</resources>

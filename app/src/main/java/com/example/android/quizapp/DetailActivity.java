@@ -37,8 +37,9 @@ public class DetailActivity extends AppCompatActivity {
     private boolean isFirstAnswer() {
         EditText firstAnswerText = findViewById(R.id.first_answer);
         String answer = firstAnswerText.getText().toString();
+        answer = answer.toLowerCase();
         TextView oneQuestionText = findViewById(R.id.text_question_one);
-        if (answer.equals("Boris Yeltsin") || answer.equals("Yeltsin") || answer.equals("boris yeltsin") || answer.equals("yeltsin")) {
+        if (answer.equals(getString(R.string.first_text_one)) || answer.equals(getString(R.string.first_text_two))) {
             oneQuestionText.setTextColor(Color.GREEN);
             return true;
         } else {
@@ -89,7 +90,8 @@ public class DetailActivity extends AppCompatActivity {
         EditText fifthAnswerText = findViewById(R.id.fifth_answer);
         TextView fiveQuestionText = findViewById(R.id.text_question_five);
         String answer = fifthAnswerText.getText().toString();
-        if (answer.equals("Ivan") || answer.equals("ivan")) {
+        answer = answer.toLowerCase();
+        if (answer.equals(getString(R.string.fifth_text))) {
             fiveQuestionText.setTextColor(Color.GREEN);
             return true;
         } else {
@@ -101,8 +103,8 @@ public class DetailActivity extends AppCompatActivity {
     public void resultClick(View view) {
         results = calculateResult(isFirstAnswer(), isSecondAnswer(), isThirdAnswer(), isFourthAnswer(), isFifthAnswer());
         if (results == 0) {
-            Toast.makeText(this, "You scored 0 point", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.score_text_part_one) + 0 + getString(R.string.score_text_part_two) + " :(", Toast.LENGTH_LONG).show();
         } else
-            Toast.makeText(this, "You scored " + results + " points", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.score_text_part_one) + results + getString(R.string.score_text_part_two), Toast.LENGTH_LONG).show();
     }
 }

@@ -6,7 +6,7 @@
     <string name="first_question">1. Who was the first democratically elected president of Russia?</string>
     <string name="first_answer">Answer</string>
 
-    <string name="second_question">2. What was the name of Tsar Nicholas II’s wife?</string>
+    <string name="second_question">2. What was the name of Tsar Nicholas II’s wife? (Two answers)</string>
     <string name="option_one">Angela</string>
     <string name="option_two">Sasha</string>
     <string name="option_three">Alicia</string>
@@ -26,4 +26,11 @@
 
     <string name="fifth_question">5. What was the first name of the Russian ruler called "the Terrible"?</string>
     <string name="results">Results here</string>
+
+
+    <string name="first_text_one">boris yeltsin</string>
+    <string name="first_text_two">yeltsin</string>
+    <string name="fifth_text">ivan</string>
+    <string name="score_text_part_one">You scored </string>
+    <string name="score_text_part_two"> points</string>
 </resources>
