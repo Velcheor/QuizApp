@@ -31,6 +31,6 @@
     <string name="first_text_one">boris yeltsin</string>
     <string name="first_text_two">yeltsin</string>
     <string name="fifth_text">ivan</string>
-    <string name="score_text_part_one">You scored </string>
-    <string name="score_text_part_two"> points</string>
+    <string name="score_text_part_one">"You scored "</string>
+    <string name="score_text_part_two">" points"</string>
 </resources>
