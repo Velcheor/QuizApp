@@ -51,8 +51,10 @@ public class DetailActivity extends AppCompatActivity {
     private boolean isSecondAnswer() {
         CheckBox oneCheckRight = findViewById(R.id.second_answer_right_one);
         CheckBox twoCheckRight = findViewById(R.id.second_answer_right_two);
+        CheckBox oneCheckWrong = findViewById(R.id.second_answer_wrong_one);
+        CheckBox twoCheckWrong = findViewById(R.id.second_answer_wrong_two);
         TextView twoQuestionText = findViewById(R.id.text_question_two);
-        if (oneCheckRight.isChecked() && twoCheckRight.isChecked()) {
+        if (oneCheckRight.isChecked() && twoCheckRight.isChecked() && !oneCheckWrong.isChecked() && !twoCheckWrong.isChecked()) {
             twoQuestionText.setTextColor(Color.GREEN);
             return true;
         } else {
